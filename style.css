@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #58B19F;
+}
+
+button{
+  text-align: center;
+  background-color: #55E6C1;
+  border: none;
+  font-size: 15px;
+  padding: 10px 30px;
+  margin-top: 20px
+}
+
+.container {
+  text-align: center;
+  width: 50%;
+  float: left;
+  margin-top: 35px;
+}
+
+.box-begin {
+  text-align: center;
+  width: 50%;
+  margin: 50px auto;
+}
+
+h1 {
+  margin: 10px 0 10px 0;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+}
+
+#start, #end {
+  display: none;
+  font-size: 18px;
+}
+
+.box-questions {
+  display: none;
+  width: 80%;
+  margin: auto
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+td {
+  border: 1px solid #9AECDB;
+  border-collapse: collapse;
+  background-color: #9AECDB;
+  height: 32px;
+  width: 30px;
+  color: #000000;
+}
+
+.crossword-letter {
+  background-color: #ffffff;
+}
+
+.question-number {
+  cursor: pointer
+}

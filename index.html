@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cruzadinha</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="crossword" style="display: none;">
+    <table>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual a memória usada no armazenamento de grandes volumes de dados?', 10)">10.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="question-number" onclick="get_question_html('Qual a memória usada <b>somente</b> para leitura dos dados gravados e seus dados não são apagados na ausência de energia elétrica?', 1)">1.</td>
+           <td class="crossword-letter" id="word_1"></td>
+           <td class="crossword-letter" id="word_2"></td>
+           <td class="crossword-letter" id="word_3"></td>
+           <td></td>
+           <td class="question-number" onclick="get_question_html('Qual o processador da Intel que possui controlador de memória DDR integrado e possui de 4 a 6 núcleos?', 11)">11.</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td class="question-number" onclick="get_question_html('Qual o barramento que indica onde os dados em processamento devem ser enviados ou retirados?', 12)">12.</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+         </tr>
+         <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome dado para a memória interna que armazena os dados necessários para o processamento das intruções, na CPU?', 2)">2.</td>
+          <td class="crossword-letter" id="word_4"></td>
+          <td class="crossword-letter" id="word_5"></td>
+          <td class="crossword-letter" id="word_6"></td>
+          <td class="crossword-letter" id="word_7"></td>
+          <td class="crossword-letter" id="word_8"></td>
+          <td class="crossword-letter" id="word_9"></td>
+          <td class="crossword-letter" id="word_10"></td>
+          <td class="crossword-letter" id="word_11"></td>
+          <td class="crossword-letter" id="word_12"></td>
+          <td class="crossword-letter" id="word_13"></td>
+          <td class="crossword-letter" id="word_14"></td>
+          <td class="crossword-letter" id="word_15"></td>
+          <td class="crossword-letter" id="word_16"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_17"></td>
+          <td></td>
+          <td class="crossword-letter" id="word_18"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_19"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_20"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_21"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome do controlador que permite alguns dispositivos acessarem a memória sem depender do CPU?', 13)">13.</td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_22"></td> 
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o primeiro tipo de memória ROM que pode ser zerada e reescrita?', 3)">3.</td>
+          <td class="crossword-letter" id="word_23"></td>
+          <td class="crossword-letter" id="word_24"></td>
+          <td class="crossword-letter" id="word_25"></td>
+          <td class="crossword-letter" id="word_26"></td>
+          <td class="crossword-letter" id="word_27"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_28"></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual foi o primeiro processador da Intel a ter um controlador de memória integrado?', 4)">4.</td>
+          <td class="crossword-letter" id="word_29"></td>
+          <td class="crossword-letter" id="word_30"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_31"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome dado a um processador que possui dois núcleos?', 14)">14.</td>
+          <td class="crossword-letter" id="word_32"></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_33"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_34"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o barramento que transfere dados e informações?', 5)">5.</td>
+          <td class="crossword-letter" id="word_35"></td>
+          <td class="crossword-letter" id="word_36"></td>
+          <td class="crossword-letter" id="word_37"></td>
+          <td class="crossword-letter" id="word_38"></td>
+          <td class="crossword-letter" id="word_39">-</td>
+          <td class="crossword-letter" id="word_40"></td>
+          <td class="crossword-letter" id="word_41"></td>
+          <td class="crossword-letter" id="word_42"></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_43">-</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr> 
+          <td class="question-number" onclick="get_question_html('Qual é a sigla da unidade responsável por todo o processamento de dados e instruções, também conhecida como o cérebro do computador? ', 6)">6.</td>
+          <td class="crossword-letter" id="word_44"></td>
+          <td class="crossword-letter" id="word_45"></td>
+          <td class="crossword-letter" id="word_46"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_47"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_48"></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome da memória de leitura e escrita que perde os dados na ausência de energia elétrica?', 15)">15.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_49"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_50"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_51"></td>
+          <td></td>
+          <td class="crossword-letter" id="word_52"></td> 
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_53"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_54">-</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o elemento interno da CPU que realiza as intruções lógicas?', 7)">7.</td>
+          <td class="crossword-letter" id="word_55"></td>
+          <td class="crossword-letter" id="word_56"></td>
+          <td class="crossword-letter" id="word_57"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_58">-</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_59"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_60"></td>
+          <td></td>
+          <td class="crossword-letter" id="word_61"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_62"></td>
+          <td class="question-number" onclick="get_question_html('Qual o tipo da memória não volátil que permite que dados sejam apagados ou escritos em uma única operação? ', 8)">8.</td>
+          <td class="crossword-letter" id="word_63"></td>
+          <td class="crossword-letter" id="word_64"></td>
+          <td class="crossword-letter" id="word_65"></td>
+          <td class="crossword-letter" id="word_66"></td>
+          <td class="crossword-letter" id="word_67"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_68"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_69"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_70"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_71"></td>
+          <td></td>
+          <td></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome do elemento que controla a ligação entre dispositivos ligados e o processador?', 16)">16.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_72"></td>
+          <td class="question-number" onclick="get_question_html('Qual o nome dado ao processador de 4 núcleos?', 9)">9.</td>
+          <td class="crossword-letter" id="word_73"></td>
+          <td class="crossword-letter" id="word_74"></td>
+          <td class="crossword-letter" id="word_75"></td>
+          <td class="crossword-letter" id="word_76"></td>
+          <td class="crossword-letter" id="word_77">-</td>
+          <td class="crossword-letter" id="word_78"></td>
+          <td class="crossword-letter" id="word_79"></td>
+          <td class="crossword-letter" id="word_80"></td>
+          <td class="crossword-letter" id="word_81"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="crossword-letter" id="word_82"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> 
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box-begin" id="title">
+      <h1>Palavras Cruzadas</h1>
+      <h2>Arquitetura Computacional</h2>
+      
+      <div id="introduction">
+        <p>Palavras Cruzadas sobre arquitetura dos computadores</p>
+        <p>Clique no botão para iniciar!!</p>
+        <button onclick="begin()">Iniciar</button>
+      
+      </div>
+
+      <div id="start">
+        <P>Selecione um número para iniciar a cruzadinha!</P>
+      </div>
+
+      <div id="crossword_questions" class="box-questions">
+        <p id="p_question"></p>
+        <input id="in_answer">
+        <br>
+        <button onclick="validate_question()">Responder</button>
+        <br><br>
+        <div id="result"></div>
+      </div>
+
+      <div id="end">
+        <div id="end_frase">Parabéns!! Você finalizou a cruzadinha</div>
+        <button onclick="begin()">Recomeçar</button>
+      </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
